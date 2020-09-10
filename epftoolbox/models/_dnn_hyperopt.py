@@ -319,7 +319,7 @@ def hyperparameter_optimizer(path_datasets_folder=os.path.join('.', 'datasets'),
     # Perform hyperparameter optimization
     fmin_objective = partial(_hyperopt_objective, trials=trials, trials_file_path=trials_file_path, 
                              max_evals=max_evals, nlayers=nlayers, dfTrain=dfTrain, dfTest=dfTest, 
-                             shuffle_train=shuffle_train, 
+                              shuffle_train=shuffle_train, 
                              dataset=dataset, data_augmentation=data_augmentation, 
                              calibration_window=calibration_window,n_exogenous_inputs=n_exogenous_inputs)
 
